@@ -1,0 +1,10 @@
+{
+   "name": "NotAWiki",
+   "start_url": "https://nota.wiki:80",
+   "description": "A blockchain deployed wiki",
+   "icons": [{
+     "src": "https://raw.githubusercontent.com/notawiki/notawiki.github.io/master/Resources/LogoNotAwiki.png",
+     "sizes": "192x192",
+     "type": "image/png"
+   }]
+ }
