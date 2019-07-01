@@ -214,6 +214,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
+var session = localStorage.getItem('session');
+
  document.getElementById('logout').addEventListener('click', function() {
    session.signUserOut(window.location.origin);
  })
