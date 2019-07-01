@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Notes App</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  <script src="https://unpkg.com/blockstack@19.2.1/dist/blockstack.js" integrity="sha384-+qYCYoUGzsMLAzHm80c4DyhbWgHBBb2N0RFqsg7Lws5ljtBtj/IwpgxZkiR7j7lp" crossorigin="anonymous"></script>
+<header>
+			<a href="#">
+				<svg width="12px" height="12px" class="save-symbol-masked">
+				  <use xlink:href="#icon"></use>
+				</svg>
+			</a>
+		</header>
+<p class="chrome">Only works in Chrome for now</p>
+		<div class="box">
+			<textarea name="johndonne" id="masterpiece" cols="10" rows="5" placeholder="Begin your masterpiece"></textarea>
+			<div class="dot">
+				<span class="save save-masked">
+					<svg width="35px" height="14px">
+					  <use xlink:href="#save-symbol-white"></use>
+					</svg>
+					to save
+				</span>
+				<span class="undo hidden">
+					Undo
+				</span>
+				<span class="settings">
+					<svg width="24px" height="7px">
+					  <use xlink:href="#settings-white"></use>
+					</svg>
+				</span>
+				<div class="ready-wrapper">
+					<svg width="34px" height="34px" class="burst hidden">
+					  <use xlink:href="#burst"></use>
+					</svg>
+					<span class="ready">
+						<svg width="74px" height="74px" class="save-symbol-masked">
+						  <use xlink:href="#ready"></use>
+						</svg>
+					</span>
+					<svg width="5px" height="5px" class="ready-dot hidden">
+					  <use xlink:href="#ready-dot"></use>
+					</svg>
+				</div>
+			</div>
+			<span class="save">
+				<svg width="35px" height="14px" class="save-symbol-masked">
+				  <use xlink:href="#save-symbol-color"></use>
+				</svg>
+				to save
+			</span>
+			<span class="settings">
+				<svg width="24px" height="7px">
+				  <use xlink:href="#settings"></use>
+				</svg>
+			</span>
+		</div>
+
+		<svg height="0" width="0">
+			<defs>
+				<g id="save-symbol-white" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(1, 1)">
+				    <path d="M4.1332053,9.5561248 C4.1332053,10.6068451 3.24298013,11.4598794 2.14645033,11.4598794 C1.04992053,11.4598794 0.159695364,10.6068451 0.159695364,9.5561248 C0.159695364,8.50540455 1.04992053,7.65237017 2.14645033,7.65237017 L10.0934702,7.65237017 C11.19,7.65237017 12.0802252,8.50540455 12.0802252,9.5561248 C12.0802252,10.6068451 11.19,11.4598794 10.0934702,11.4598794 C8.9969404,11.4598794 8.10671523,10.6068451 8.10671523,9.5561248 L8.10671523,1.94110629 C8.10671523,0.890386039 8.9969404,0.0373516658 10.0934702,0.0373516658 C11.19,0.0373516658 12.0802252,0.890386039 12.0802252,1.94110629 C12.0802252,2.99182655 11.19,3.84486092 10.0934702,3.84486092 L2.14645033,3.84486092 C1.04992053,3.84486092 0.159695364,2.99182655 0.159695364,1.94110629 C0.159695364,0.890386039 1.04992053,0.0373516658 2.14645033,0.0373516658 C3.24298013,0.0373516658 4.1332053,0.890386039 4.1332053,1.94110629 L4.1332053,9.5561248" id="Stroke-1"></path>
+				    <path d="M18.0537351,5.74861555 L31.0167748,5.74861555 C31.5382781,5.74861555 31.9610199,5.34353464 31.9610199,4.84383712 L31.9610199,2.84588472 C31.9610199,2.3461872 31.5382781,1.94110629 31.0167947,1.94110629 L27.9875099,1.94110629" id="Stroke-2"></path>
+				    <path d="M22.027245,1.94110629 L18.0537351,5.74861555 L22.027245,9.5561248" id="Stroke-3"></path>
+				</g>
+				<g id="save-symbol-color" fill="none" stroke="#318CFA" stroke-linecap="round" stroke-linejoin="round" transform="translate(1, 1)">
+				    <path d="M4.1332053,9.5561248 C4.1332053,10.6068451 3.24298013,11.4598794 2.14645033,11.4598794 C1.04992053,11.4598794 0.159695364,10.6068451 0.159695364,9.5561248 C0.159695364,8.50540455 1.04992053,7.65237017 2.14645033,7.65237017 L10.0934702,7.65237017 C11.19,7.65237017 12.0802252,8.50540455 12.0802252,9.5561248 C12.0802252,10.6068451 11.19,11.4598794 10.0934702,11.4598794 C8.9969404,11.4598794 8.10671523,10.6068451 8.10671523,9.5561248 L8.10671523,1.94110629 C8.10671523,0.890386039 8.9969404,0.0373516658 10.0934702,0.0373516658 C11.19,0.0373516658 12.0802252,0.890386039 12.0802252,1.94110629 C12.0802252,2.99182655 11.19,3.84486092 10.0934702,3.84486092 L2.14645033,3.84486092 C1.04992053,3.84486092 0.159695364,2.99182655 0.159695364,1.94110629 C0.159695364,0.890386039 1.04992053,0.0373516658 2.14645033,0.0373516658 C3.24298013,0.0373516658 4.1332053,0.890386039 4.1332053,1.94110629 L4.1332053,9.5561248" id="Stroke-1"></path>
+				    <path d="M18.0537351,5.74861555 L31.0167748,5.74861555 C31.5382781,5.74861555 31.9610199,5.34353464 31.9610199,4.84383712 L31.9610199,2.84588472 C31.9610199,2.3461872 31.5382781,1.94110629 31.0167947,1.94110629 L27.9875099,1.94110629" id="Stroke-2"></path>
+				    <path d="M22.027245,1.94110629 L18.0537351,5.74861555 L22.027245,9.5561248" id="Stroke-3"></path>
+				</g>
+
+				<g id="settings" fill="none" stroke="#7F7F7F" transform="translate(1,1)">
+				    <circle id="Oval-2" cx="2.44444444" cy="2.44444444" r="2.44444444"></circle>
+				    <circle id="Oval-2-Copy" cx="11" cy="2.44444444" r="2.44444444"></circle>
+				    <circle id="Oval-2-Copy-2" cx="19.5555556" cy="2.44444444" r="2.44444444"></circle>
+				</g>
+				<g id="settings-white" fill="none" stroke="#ffffff" transform="translate(1,1)">
+				    <circle id="Oval-2" cx="2.44444444" cy="2.44444444" r="2.44444444"></circle>
+				    <circle id="Oval-2-Copy" cx="11" cy="2.44444444" r="2.44444444"></circle>
+				    <circle id="Oval-2-Copy-2" cx="19.5555556" cy="2.44444444" r="2.44444444"></circle>
+				</g>
+
+				<g id="ready" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,2)">
+				    <path d="M70,35 C70,54.317017 54.317017,70 35,70 C15.6829432,70 0,54.317017 0,35 C0,15.682983 15.6829432,0 35,0 C47.2075227,0 57.9637386,6.26332955 64.2276648,15.7490057 L36.1364256,43.8402448 C33.4048197,46.5718507 28.9711096,46.5669488 26.2396334,43.8354727 L18.7767983,36.3726375" id="ready"></path>
+				</g>
+				<g id="ready-dot" fill="#ffffff" stroke="none">
+				    <circle id="Oval-2" cx="2.2" cy="2.2" r="2.2"></circle>
+			    </g>
+				<g id="burst" transform="matrix(1,0,0,1,13,0) translate(1,1)"  fill="none" stroke="white" stroke-linecap="round">
+				    <g id="group1">
+						<g transform="matrix(-1,3.21625e-16,-3.21625e-16,-1,3,10)">
+						    <path d="M1,1L1,9"/>
+						</g>
+						<g transform="matrix(2.83277e-16,1,-1,2.83277e-16,-3,14)">
+						    <path d="M1,1L1,9"/>
+						</g>
+						<g transform="matrix(1,0,0,1,-14,0)">
+						    <path d="M16,21L16,29"/>
+						</g>
+						<g transform="matrix(-1.60812e-16,-1,1,-1.60812e-16,-13.1024,31)">
+						    <path d="M16,21L16,29"/>
+						</g>
+				    </g>
+				    <g id="group2" transform="rotate(45) translate(10, -6)">
+						<g transform="matrix(-1,3.21625e-16,-3.21625e-16,-1,3,10)">
+						    <path d="M1,1L1,9"/>
+						</g>
+						<g transform="matrix(2.83277e-16,1,-1,2.83277e-16,-3,14)">
+						    <path d="M1,1L1,9"/>
+						</g>
+						<g transform="matrix(1,0,0,1,-14,0)">
+						    <path d="M16,21L16,29"/>
+						</g>
+						<g transform="matrix(-1.60812e-16,-1,1,-1.60812e-16,-13.1024,31)">
+						    <path d="M16,21L16,29"/>
+						</g>
+				    </g>
+				</g>
+
+				<g id="icon" fill="white">
+				    <path d="M1,11 L11,11 L11,2 L1,2 L1,11 Z M12,1.5 L12,12 L0,12 L0,1.5 L0,0 L12,0 L12,1.5 Z" id="Combined-Shape"></path>
+				    <path d="M3,4 L9,4 L9,5 L3,5 L3,4 Z M3,6 L9,6 L9,7 L3,7 L3,6 Z M3,8 L7,8 L7,9 L3,9 L3,8 Z M8,8 L9,8 L9,9 L8,9 L8,8 Z" id="Combined-Shape"></path>
+				</g>
+
+				<clipPath id="boxPath" transform="translate(1,0)">
+					<path d="M0,18.0076699 C0,13.5851559 3.59126464,10 8.00319663,10 L271.996803,10 C276.416847,10 280,13.5787634 280,18.0076699 L280,211.99233 C280,216.414844 276.408735,220 271.996803,220 L8.00319663,220 C3.58315318,220 0,216.421237 0,211.99233 L0,18.0076699 Z M129,10 L140,0 L151,10 L129,10 Z" id="path-1"></path>
+				</clipPath>
+				<filter id="dropshadow" height="130%">
+				  <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+				  <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
+				  <feMerge> 
+				    <feMergeNode/> <!-- this contains the offset blurred image -->
+				    <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+				  </feMerge>
+				</filter>
+			</defs>
+		</svg>
+
+<div id="logout">Log Out</div>
+  <script src='http://beta.boyankostov.com/codepen-cdn/bezier-easing.js'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
