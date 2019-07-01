@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
  document.getElementById('logout').addEventListener('click', function() {
-   blockstack.signUserOut(window.location.origin);
+   session.signUserOut(window.location.origin);
  })
 
 function showProfile(profile) {
@@ -226,11 +226,11 @@ function showProfile(profile) {
    document.getElementById('section-2').style.display = 'block'
  }
 
- if (blockstack.isUserSignedIn()) {
-  const userData = blockstack.loadUserData()
+ if (session.isUserSignedIn()) {
+  const userData = session.loadUserData()
    showProfile(userData.profile)
- } else if (blockstack.isSignInPending()) {
-   blockstack.handlePendingSignIn()
+ } else if (session.isSignInPending()) {
+   session.handlePendingSignIn()
    .then(userData => {
      showProfile(userData.profile)
    })
