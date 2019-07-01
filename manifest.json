@@ -1,6 +1,6 @@
 {
    "name": "NotAWiki",
-   "start_url": "https://nota.wiki:80",
+   "start_url": "https://app.nota.wiki:80",
    "description": "A blockchain deployed wiki",
    "icons": [{
      "src": "https://raw.githubusercontent.com/notawiki/notawiki.github.io/master/Resources/LogoNotAwiki.png",
